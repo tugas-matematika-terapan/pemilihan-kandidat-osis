@@ -1,3 +1,17 @@
+export type ProgramIcon =
+  | "sparkles"
+  | "megaphone"
+  | "book"
+  | "users"
+  | "trophy"
+  | "heart"
+  | "leaf"
+  | "laptop"
+  | "shield"
+  | "palette"
+  | "globe"
+  | "lightbulb";
+
 export type Candidate = {
   id: number;
   nomor: number;
@@ -10,7 +24,7 @@ export type Candidate = {
   tagline: string;
   visi: string;
   misi: string[];
-  program: { title: string; desc: string }[];
+  program: { title: string; desc: string; icon: ProgramIcon }[];
   color: string;
 };
 
@@ -33,9 +47,10 @@ export const CANDIDATES: Candidate[] = [
       "Memperkuat solidaritas antar angkatan.",
     ],
     program: [
-      { title: "Festival Kreativitas Siswa", desc: "Ajang tahunan menampilkan bakat seni, musik, dan teknologi." },
-      { title: "OSIS Mendengar", desc: "Forum bulanan terbuka untuk menampung aspirasi siswa." },
-      { title: "Pekan Literasi", desc: "Lomba esai, debat, dan bedah buku bersama alumni." },
+      { title: "Festival Kreativitas Siswa", desc: "Ajang tahunan menampilkan bakat seni, musik, dan teknologi dari seluruh angkatan.", icon: "palette" },
+      { title: "OSIS Mendengar", desc: "Forum bulanan terbuka untuk menampung aspirasi dan keluhan siswa.", icon: "megaphone" },
+      { title: "Pekan Literasi", desc: "Lomba esai, debat, dan bedah buku bersama alumni inspiratif.", icon: "book" },
+      { title: "Kolaborasi Ekskul", desc: "Pentas akhir tahun yang menampilkan kolaborasi seluruh ekstrakurikuler.", icon: "sparkles" },
     ],
     color: "#1d4ed8",
   },
@@ -57,9 +72,10 @@ export const CANDIDATES: Candidate[] = [
       "Mendukung kegiatan akademik dan non-akademik.",
     ],
     program: [
-      { title: "Leadership Bootcamp", desc: "Pelatihan kepemimpinan untuk pengurus dan calon pengurus OSIS." },
-      { title: "Bakti Sosial Sekolah", desc: "Kegiatan donasi & kunjungan sosial setiap semester." },
-      { title: "Class Competition", desc: "Kompetisi antar kelas: olahraga, sains, dan seni." },
+      { title: "Leadership Bootcamp", desc: "Pelatihan kepemimpinan intensif untuk pengurus dan calon pengurus OSIS.", icon: "trophy" },
+      { title: "Bakti Sosial Sekolah", desc: "Kegiatan donasi & kunjungan sosial ke panti dan komunitas setiap semester.", icon: "heart" },
+      { title: "Class Competition", desc: "Kompetisi antar kelas: olahraga, sains, debat, dan seni pertunjukan.", icon: "trophy" },
+      { title: "Parents & Teachers Forum", desc: "Pertemuan rutin OSIS dengan wali murid dan guru untuk sinergi program.", icon: "users" },
     ],
     color: "#0ea5e9",
   },
@@ -81,9 +97,10 @@ export const CANDIDATES: Candidate[] = [
       "Transparansi anggaran dan program kerja.",
     ],
     program: [
-      { title: "OSIS Digital Hub", desc: "Platform pengumuman, aspirasi, dan kalender kegiatan online." },
-      { title: "Green School Movement", desc: "Program daur ulang, bank sampah, dan penghijauan sekolah." },
-      { title: "Mind & Mental Week", desc: "Kampanye kesehatan mental dan sesi konseling teman sebaya." },
+      { title: "OSIS Digital Hub", desc: "Platform pengumuman, aspirasi, dan kalender kegiatan terintegrasi online.", icon: "laptop" },
+      { title: "Green School Movement", desc: "Program daur ulang, bank sampah, dan penghijauan sekolah secara berkelanjutan.", icon: "leaf" },
+      { title: "Mind & Mental Week", desc: "Kampanye kesehatan mental dan sesi konseling teman sebaya bersama psikolog.", icon: "heart" },
+      { title: "Transparansi 360°", desc: "Dashboard publik laporan anggaran & progres program kerja OSIS.", icon: "shield" },
     ],
     color: "#16a34a",
   },
