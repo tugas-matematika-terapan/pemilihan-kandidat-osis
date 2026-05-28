@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Pemilihan Osis" },
+      { name: "description", content: "pemilihan ketua osis dan wakil ketua osis di smk" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Pemilihan Osis" },
+      { property: "og:description", content: "pemilihan ketua osis dan wakil ketua osis di smk" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Pemilihan Osis" },
+      { name: "twitter:description", content: "pemilihan ketua osis dan wakil ketua osis di smk" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3d04055e-bc18-4ae6-afd3-ad69f36b4e4e/id-preview-358b1cce--a9f83e1d-b8a7-464e-8623-c96a02c9f821.lovable.app-1779951246705.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3d04055e-bc18-4ae6-afd3-ad69f36b4e4e/id-preview-358b1cce--a9f83e1d-b8a7-464e-8623-c96a02c9f821.lovable.app-1779951246705.png" },
     ],
     links: [
       {
