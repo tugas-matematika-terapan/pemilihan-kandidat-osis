@@ -97,9 +97,10 @@ export const CANDIDATES: Candidate[] = [
       "Transparansi anggaran dan program kerja.",
     ],
     program: [
-      { title: "OSIS Digital Hub", desc: "Platform pengumuman, aspirasi, dan kalender kegiatan online." },
-      { title: "Green School Movement", desc: "Program daur ulang, bank sampah, dan penghijauan sekolah." },
-      { title: "Mind & Mental Week", desc: "Kampanye kesehatan mental dan sesi konseling teman sebaya." },
+      { title: "OSIS Digital Hub", desc: "Platform pengumuman, aspirasi, dan kalender kegiatan terintegrasi online.", icon: "laptop" },
+      { title: "Green School Movement", desc: "Program daur ulang, bank sampah, dan penghijauan sekolah secara berkelanjutan.", icon: "leaf" },
+      { title: "Mind & Mental Week", desc: "Kampanye kesehatan mental dan sesi konseling teman sebaya bersama psikolog.", icon: "heart" },
+      { title: "Transparansi 360°", desc: "Dashboard publik laporan anggaran & progres program kerja OSIS.", icon: "shield" },
     ],
     color: "#16a34a",
   },
