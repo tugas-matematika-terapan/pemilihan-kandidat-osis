@@ -9,8 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VoteRouteImport } from './routes/vote'
+import { Route as SuccessRouteImport } from './routes/success'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as KandidatRouteImport } from './routes/kandidat'
+import { Route as HasilRouteImport } from './routes/hasil'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VoteRoute = VoteRouteImport.update({
+  id: '/vote',
+  path: '/vote',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SuccessRoute = SuccessRouteImport.update({
+  id: '/success',
+  path: '/success',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KandidatRoute = KandidatRouteImport.update({
+  id: '/kandidat',
+  path: '/kandidat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HasilRoute = HasilRouteImport.update({
+  id: '/hasil',
+  path: '/hasil',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +49,90 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/hasil': typeof HasilRoute
+  '/kandidat': typeof KandidatRoute
+  '/login': typeof LoginRoute
+  '/success': typeof SuccessRoute
+  '/vote': typeof VoteRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/hasil': typeof HasilRoute
+  '/kandidat': typeof KandidatRoute
+  '/login': typeof LoginRoute
+  '/success': typeof SuccessRoute
+  '/vote': typeof VoteRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/hasil': typeof HasilRoute
+  '/kandidat': typeof KandidatRoute
+  '/login': typeof LoginRoute
+  '/success': typeof SuccessRoute
+  '/vote': typeof VoteRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/hasil' | '/kandidat' | '/login' | '/success' | '/vote'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/hasil' | '/kandidat' | '/login' | '/success' | '/vote'
+  id:
+    | '__root__'
+    | '/'
+    | '/hasil'
+    | '/kandidat'
+    | '/login'
+    | '/success'
+    | '/vote'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  HasilRoute: typeof HasilRoute
+  KandidatRoute: typeof KandidatRoute
+  LoginRoute: typeof LoginRoute
+  SuccessRoute: typeof SuccessRoute
+  VoteRoute: typeof VoteRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/vote': {
+      id: '/vote'
+      path: '/vote'
+      fullPath: '/vote'
+      preLoaderRoute: typeof VoteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/success': {
+      id: '/success'
+      path: '/success'
+      fullPath: '/success'
+      preLoaderRoute: typeof SuccessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kandidat': {
+      id: '/kandidat'
+      path: '/kandidat'
+      fullPath: '/kandidat'
+      preLoaderRoute: typeof KandidatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hasil': {
+      id: '/hasil'
+      path: '/hasil'
+      fullPath: '/hasil'
+      preLoaderRoute: typeof HasilRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +145,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  HasilRoute: HasilRoute,
+  KandidatRoute: KandidatRoute,
+  LoginRoute: LoginRoute,
+  SuccessRoute: SuccessRoute,
+  VoteRoute: VoteRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
