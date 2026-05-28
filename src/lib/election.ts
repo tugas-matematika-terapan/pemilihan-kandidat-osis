@@ -47,9 +47,10 @@ export const CANDIDATES: Candidate[] = [
       "Memperkuat solidaritas antar angkatan.",
     ],
     program: [
-      { title: "Festival Kreativitas Siswa", desc: "Ajang tahunan menampilkan bakat seni, musik, dan teknologi." },
-      { title: "OSIS Mendengar", desc: "Forum bulanan terbuka untuk menampung aspirasi siswa." },
-      { title: "Pekan Literasi", desc: "Lomba esai, debat, dan bedah buku bersama alumni." },
+      { title: "Festival Kreativitas Siswa", desc: "Ajang tahunan menampilkan bakat seni, musik, dan teknologi dari seluruh angkatan.", icon: "palette" },
+      { title: "OSIS Mendengar", desc: "Forum bulanan terbuka untuk menampung aspirasi dan keluhan siswa.", icon: "megaphone" },
+      { title: "Pekan Literasi", desc: "Lomba esai, debat, dan bedah buku bersama alumni inspiratif.", icon: "book" },
+      { title: "Kolaborasi Ekskul", desc: "Pentas akhir tahun yang menampilkan kolaborasi seluruh ekstrakurikuler.", icon: "sparkles" },
     ],
     color: "#1d4ed8",
   },
