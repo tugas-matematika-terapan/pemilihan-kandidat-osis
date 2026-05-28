@@ -72,9 +72,10 @@ export const CANDIDATES: Candidate[] = [
       "Mendukung kegiatan akademik dan non-akademik.",
     ],
     program: [
-      { title: "Leadership Bootcamp", desc: "Pelatihan kepemimpinan untuk pengurus dan calon pengurus OSIS." },
-      { title: "Bakti Sosial Sekolah", desc: "Kegiatan donasi & kunjungan sosial setiap semester." },
-      { title: "Class Competition", desc: "Kompetisi antar kelas: olahraga, sains, dan seni." },
+      { title: "Leadership Bootcamp", desc: "Pelatihan kepemimpinan intensif untuk pengurus dan calon pengurus OSIS.", icon: "trophy" },
+      { title: "Bakti Sosial Sekolah", desc: "Kegiatan donasi & kunjungan sosial ke panti dan komunitas setiap semester.", icon: "heart" },
+      { title: "Class Competition", desc: "Kompetisi antar kelas: olahraga, sains, debat, dan seni pertunjukan.", icon: "trophy" },
+      { title: "Parents & Teachers Forum", desc: "Pertemuan rutin OSIS dengan wali murid dan guru untuk sinergi program.", icon: "users" },
     ],
     color: "#0ea5e9",
   },
