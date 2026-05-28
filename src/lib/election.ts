@@ -1,3 +1,17 @@
+export type ProgramIcon =
+  | "sparkles"
+  | "megaphone"
+  | "book"
+  | "users"
+  | "trophy"
+  | "heart"
+  | "leaf"
+  | "laptop"
+  | "shield"
+  | "palette"
+  | "globe"
+  | "lightbulb";
+
 export type Candidate = {
   id: number;
   nomor: number;
@@ -10,7 +24,7 @@ export type Candidate = {
   tagline: string;
   visi: string;
   misi: string[];
-  program: { title: string; desc: string }[];
+  program: { title: string; desc: string; icon: ProgramIcon }[];
   color: string;
 };
 
